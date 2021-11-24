@@ -1,0 +1,29 @@
+From 2477bb23a933eed913c144ba9ffe768c5be84df5 Mon Sep 17 00:00:00 2001
+From: savitaashture <sashture@redhat.com>
+Date: Wed, 24 Nov 2021 16:18:47 +0530
+Subject: [PATCH] Add patch to apply namespaces/finalizers to triggers
+
+---
+ .../operator/kodata/tekton-trigger/0.16.1/00-triggers.yaml  | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/cmd/openshift/operator/kodata/tekton-trigger/0.16.1/00-triggers.yaml b/cmd/openshift/operator/kodata/tekton-trigger/0.16.1/00-triggers.yaml
+index 1f21195e..87d2e4b1 100644
+--- a/cmd/openshift/operator/kodata/tekton-trigger/0.16.1/00-triggers.yaml
++++ b/cmd/openshift/operator/kodata/tekton-trigger/0.16.1/00-triggers.yaml
+@@ -95,6 +95,12 @@ rules:
+     # The webhook configured the namespace as the OwnerRef on various cluster-scoped resources,
+     # which requires we can Get the system namespace.
+     resourceNames: ["tekton-pipelines"]
++  - apiGroups: [""]
++    resources: ["namespaces/finalizers"]
++    verbs: ["update"]
++    # The webhook configured the namespace as the OwnerRef on various cluster-scoped resources,
++    # which requires we can update the system namespace finalizers.
++    resourceNames: ["tekton-pipelines"]
+ ---
+ kind: ClusterRole
+ apiVersion: rbac.authorization.k8s.io/v1
+-- 
+2.20.1
+
