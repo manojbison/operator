@@ -12,7 +12,8 @@ fixes needed only for the OpenShift side of things.
   export OPERATOR_UPSTREAM_BRANCH=release-v0.50.x
   export OPERATOR_MIDSTREAM_BRANCH=release-v0.50.x
   export PIPELINE_VERSION=v0.28.2
-  export TRIGGERS_VERSION=v0.16.0
+  export TRIGGERS_VERSION=v0.16.1
+  export CATALOG_RELEASE_BRANCH=release-v0.28
   ```
 
 1. Run `create-release-branch` script
