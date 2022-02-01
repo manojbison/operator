@@ -11,7 +11,7 @@ fixes needed only for the OpenShift side of things.
   ```bash
   export OPERATOR_UPSTREAM_BRANCH=release-v0.50.x
   export OPERATOR_MIDSTREAM_BRANCH=release-v0.50.x
-  export PIPELINE_VERSION=v0.28.2
+  export PIPELINE_VERSION=v0.28.3
   export TRIGGERS_VERSION=v0.16.1
   export CATALOG_RELEASE_BRANCH=release-v0.28
   ```
