@@ -8,13 +8,13 @@ webhook on OpenShift.
 
 Signed-off-by: Vincent Demeester <vdemeest@redhat.com>
 ---
- .../kodata/tekton-pipeline/0.28.2/00-pipelines.yaml    | 10 ++++++++--
+ .../kodata/tekton-pipeline/0.28.3/00-pipelines.yaml    | 10 ++++++++--
  1 file changed, 8 insertions(+), 2 deletions(-)
 
-diff --git a/cmd/openshift/operator/kodata/tekton-pipeline/0.28.2/00-pipelines.yaml b/cmd/openshift/operator/kodata/tekton-pipeline/0.28.2/00-pipelines.yaml
+diff --git a/cmd/openshift/operator/kodata/tekton-pipeline/0.28.3/00-pipelines.yaml b/cmd/openshift/operator/kodata/tekton-pipeline/0.28.3/00-pipelines.yaml
 index 206ea5d8..1b7aa759 100644
---- a/cmd/openshift/operator/kodata/tekton-pipeline/0.28.2/00-pipelines.yaml
-+++ b/cmd/openshift/operator/kodata/tekton-pipeline/0.28.2/00-pipelines.yaml
+--- a/cmd/openshift/operator/kodata/tekton-pipeline/0.28.3/00-pipelines.yaml
++++ b/cmd/openshift/operator/kodata/tekton-pipeline/0.28.3/00-pipelines.yaml
 @@ -157,7 +157,7 @@ rules:
      resourceNames: ["webhook.pipeline.tekton.dev"]
      # When there are changes to the configs or secrets, knative updates the mutatingwebhook config
