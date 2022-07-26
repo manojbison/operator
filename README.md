@@ -1,3 +1,7 @@
+# This repository should be considered read-only !
+
+Head towards [`tektoncd/operator`](https://github.com/tektoncd/operator) for the OpenShift target of the tektoncd operator.
+
 # Openshift TektonCD operator
 
 This repository holds Openshift's fork of
